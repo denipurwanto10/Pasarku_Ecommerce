@@ -5,7 +5,7 @@ Aplikasi marketplace sederhana dengan dua peran pengguna:
 - **Penjual** — dashboard toko, kelola produk (CRUD + upload gambar), kelola status pesanan masuk.
 
 Dibangun dengan Laravel 11, MySQL, dan Tailwind CSS (desain kustom, bukan template bawaan).
-
+ 
 ## Fitur
 
 - Autentikasi & registrasi dengan pilihan peran (Pembeli / Penjual)
