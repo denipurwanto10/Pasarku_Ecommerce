@@ -1,5 +1,5 @@
 # Pasarku — Aplikasi E-Commerce Multi Penjual (Laravel)
-
+ 
 Aplikasi marketplace sederhana dengan dua peran pengguna:
 - **Pembeli** — jelajahi produk, keranjang belanja, checkout, riwayat pesanan.
 - **Penjual** — dashboard toko, kelola produk (CRUD + upload gambar), kelola status pesanan masuk.
