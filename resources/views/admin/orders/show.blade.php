@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', $order->order_number)
 @section('content')
-<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <a href="{{ route('admin.orders.index') }}" class="text-sm text-ink-400 hover:text-clay-600 mb-6 inline-block">&larr; Kembali ke daftar transaksi</a>
 
     <div class="rounded-lg border border-ink-100 bg-white shadow-card p-5 sm:p-8">

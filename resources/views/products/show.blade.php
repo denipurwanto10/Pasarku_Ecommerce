@@ -40,7 +40,7 @@
             <a href="{{ route('home', ['category' => $product->category->slug]) }}" class="inline-block text-xs font-semibold text-clay-600 hover:underline">{{ $product->category->name }}</a>
             @endif
             <div class="mt-4 flex items-start justify-between gap-3">
-                <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900 leading-tight">{{ $product->name }}</h1>
+                <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900 leading-tight">{{ $product->name }}</h1>
                 <div class="flex items-center gap-2 shrink-0">
                     <button type="button" onclick="shareContent(@js($product->name), @js(route('products.show', $product)))"
                         class="h-11 w-11 rounded-full border border-ink-200 flex items-center justify-center text-ink-400 hover:text-clay-600 hover:border-clay-300 transition-colors active:scale-90"

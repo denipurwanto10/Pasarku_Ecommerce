@@ -12,10 +12,10 @@
     </div>
 </section>
 
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3 sm:gap-4">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <div class="flex gap-3 sm:gap-5 overflow-x-auto snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0 md:grid md:grid-cols-8 md:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <?php $__currentLoopData = $categories->take(8); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <a href="<?php echo e(route('home', ['category' => $cat->slug])); ?>" class="flex flex-col items-center gap-1.5 group">
+        <a href="<?php echo e(route('home', ['category' => $cat->slug])); ?>" class="flex flex-col items-center gap-2 group shrink-0 w-[4.5rem] md:w-auto snap-start">
             <span class="h-12 w-12 sm:h-14 sm:w-14 rounded-lg market-card flex items-center justify-center text-xl sm:text-2xl group-hover:border-clay-300"><?php echo e($cat->icon ?: '🛍️'); ?></span>
             <span class="text-[11px] text-ink-600 text-center leading-tight line-clamp-1 group-hover:text-clay-600"><?php echo e($cat->name); ?></span>
         </a>
@@ -25,10 +25,10 @@
 
 <?php if($banners->isNotEmpty()): ?>
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-    <div class="relative rounded-lg overflow-hidden shadow-card" id="banner-carousel">
+    <div class="relative rounded-2xl overflow-hidden shadow-card" id="banner-carousel">
         <div id="banner-track" class="flex transition-transform duration-500 ease-out">
             <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <a href="<?php echo e($banner->link_url ?: '#'); ?>" class="relative w-full shrink-0 block aspect-[3/1] sm:aspect-[4/1] bg-ink-900">
+            <a href="<?php echo e($banner->link_url ?: '#'); ?>" class="relative w-full shrink-0 block aspect-[16/9] sm:aspect-[3/1] lg:aspect-[7/2] bg-ink-900">
                 <img src="<?php echo e($banner->image_url); ?>" alt="<?php echo e($banner->title); ?>" class="absolute inset-0 w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-ink-900/70 via-ink-900/20 to-transparent"></div>
                 <div class="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 max-w-lg">

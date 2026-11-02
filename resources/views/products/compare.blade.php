@@ -2,10 +2,10 @@
 @section('title', 'Bandingkan Produk')
 
 @section('content')
-<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <div class="flex items-start sm:items-center justify-between gap-4 mb-6 flex-col sm:flex-row">
         <div>
-            <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900">Bandingkan Produk</h1>
+            <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900">Bandingkan Produk</h1>
             <p class="text-sm text-ink-400 mt-1">Lihat harga, rating, dan detail produk pilihanmu berdampingan.</p>
         </div>
         @if($products->isNotEmpty())

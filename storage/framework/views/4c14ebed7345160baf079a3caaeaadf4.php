@@ -39,7 +39,7 @@
             <a href="<?php echo e(route('home', ['category' => $product->category->slug])); ?>" class="inline-block text-xs font-semibold text-clay-600 hover:underline"><?php echo e($product->category->name); ?></a>
             <?php endif; ?>
             <div class="mt-4 flex items-start justify-between gap-3">
-                <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900 leading-tight"><?php echo e($product->name); ?></h1>
+                <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900 leading-tight"><?php echo e($product->name); ?></h1>
                 <div class="flex items-center gap-2 shrink-0">
                     <button type="button" onclick="shareContent(<?php echo \Illuminate\Support\Js::from($product->name)->toHtml() ?>, <?php echo \Illuminate\Support\Js::from(route('products.show', $product))->toHtml() ?>)"
                         class="h-11 w-11 rounded-full border border-ink-200 flex items-center justify-center text-ink-400 hover:text-clay-600 hover:border-clay-300 transition-colors active:scale-90"

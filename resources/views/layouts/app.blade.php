@@ -11,7 +11,7 @@
     <meta property="og:description" content="@yield('meta_description', 'Pasarku menghubungkan kamu dengan penjual lokal terpercaya. Belanja langsung, dukung usaha kecil, semuanya dalam satu tempat.')">
     @hasSection('meta_image')<meta property="og:image" content="@yield('meta_image')">@endif
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#6d28d9">
+    <meta name="theme-color" content="#34476e">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>
         try {
@@ -21,29 +21,29 @@
         } catch (e) {}
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        clay: { 50:'#f5f3ff', 100:'#ede9fe', 200:'#ddd6fe', 300:'#c4b5fd', 400:'#a78bfa', 500:'#7c3aed', 600:'#6d28d9', 700:'#5b21b6', 800:'#4c1d95', 900:'#2e1065' },
+                        clay: { 50:'#f3f5f9', 100:'#e6eaf2', 200:'#cdd5e4', 300:'#a8b5cf', 400:'#7b8cb0', 500:'#4f6491', 600:'#34476e', 700:'#2a3a5a', 800:'#202c45', 900:'#151d2f' },
                         forest: { 50:'#ecfdf5', 100:'#d1fae5', 200:'#a7f3d0', 300:'#6ee7b7', 400:'#34d399', 500:'#10b981', 600:'#059669', 700:'#047857', 800:'#065f46', 900:'#064e3b' },
                         ink: { 50:'#f8fafc', 100:'#f1f5f9', 200:'#e2e8f0', 300:'#cbd5e1', 400:'#94a3b8', 500:'#64748b', 600:'#475569', 700:'#334155', 800:'#1e293b', 900:'#0f172a' },
-                        price: { DEFAULT:'#d0021b', 50:'#fef2f2' },
+                        price: { DEFAULT:'#b42318', 50:'#fef2f2' },
                     },
                     fontFamily: {
-                        serif: ['Sora', 'sans-serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Hanken Grotesk', 'sans-serif'],
+                        sans: ['Hanken Grotesk', 'sans-serif'],
                     },
                     borderRadius: {
-                        DEFAULT: '0.5rem',
+                        DEFAULT: '0.625rem', md: '0.625rem', lg: '0.875rem', xl: '1.125rem', '2xl': '1.5rem',
                     },
                     boxShadow: {
-                        soft: '0 1px 2px rgba(15,23,42,0.06), 0 1px 6px -2px rgba(15,23,42,0.06)',
-                        card: '0 1px 2px rgba(15,23,42,0.05), 0 4px 14px -6px rgba(15,23,42,0.12)',
-                        glow: '0 1px 2px rgba(109,40,217,0.15), 0 2px 8px -2px rgba(109,40,217,0.18)',
+                        soft: '0 1px 2px rgba(21,29,47,0.05), 0 2px 8px -4px rgba(21,29,47,0.08)',
+                        card: '0 1px 2px rgba(21,29,47,0.04), 0 12px 32px -16px rgba(21,29,47,0.18)',
+                        glow: '0 1px 2px rgba(52,71,110,0.15), 0 2px 8px -2px rgba(52,71,110,0.18)',
                     },
                 }
             }
@@ -54,13 +54,13 @@
         /* overflow-x: clip (bukan hidden) — tetap mencegah scroll horizontal tanpa
            membuat body jadi scroll container, yang bisa merusak position:sticky (header). */
         html, body { max-width: 100%; overflow-x: clip; }
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
-        .font-serif { font-family: 'Sora', sans-serif; letter-spacing: -0.01em; }
+        body { font-family: 'Hanken Grotesk', sans-serif; background-color: #f6f7f9; }
+        .font-serif { font-family: 'Hanken Grotesk', sans-serif; letter-spacing: -0.01em; }
         img, svg, video { max-width: 100%; }
         ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        .texture-dots { background-image: radial-gradient(#7c3aed22 1px, transparent 1px); background-size: 18px 18px; }
+        .texture-dots { background-image: radial-gradient(#4f649122 1px, transparent 1px); background-size: 18px 18px; }
         .texture-grain { position: relative; }
         .texture-grain::after {
             content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .25; mix-blend-mode: overlay;
@@ -72,8 +72,8 @@
         .link-underline { position: relative; }
         .link-underline::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 1.5px; background: currentColor; transition: right .25s ease; }
         .link-underline:hover::after { right: 0; }
-        .gradient-brand { background-image: linear-gradient(180deg, #7c3aed 0%, #6d28d9 100%); }
-        .gradient-mesh { background-image: radial-gradient(at 15% 15%, rgba(124,58,237,0.08) 0px, transparent 45%), radial-gradient(at 85% 0%, rgba(16,185,129,0.06) 0px, transparent 45%); }
+        .gradient-brand { background-image: linear-gradient(180deg, #4f6491 0%, #34476e 100%); }
+        .gradient-mesh { background-image: radial-gradient(at 15% 15%, rgba(79,100,145,0.08) 0px, transparent 45%), radial-gradient(at 85% 0%, rgba(16,185,129,0.06) 0px, transparent 45%); }
         .glass { background: rgba(255,255,255,0.92); backdrop-filter: blur(10px) saturate(140%); -webkit-backdrop-filter: blur(10px) saturate(140%); }
 
         /* ===== Elemen khas marketplace ===== */
@@ -81,15 +81,15 @@
         .market-card { border-radius: 0.5rem; border: 1px solid #eef0f3; background: #fff; transition: box-shadow .15s ease, border-color .15s ease; }
         .market-card:hover { box-shadow: 0 2px 10px -2px rgba(15,23,42,0.12); border-color: #e2e8f0; }
         /* Harga: merah tegas khas marketplace, harga coret abu-abu */
-        .price-tag { color: #d0021b; font-weight: 700; }
+        .price-tag { color: #b42318; font-weight: 700; }
         .price-strike { color: #94a3b8; text-decoration: line-through; font-weight: 400; }
-        .badge-discount { background: #d0021b; color: #fff; font-weight: 700; }
+        .badge-discount { background: #b42318; color: #fff; font-weight: 700; }
         /* Bar kategori di bawah header */
         .category-bar { border-bottom: 1px solid #eef0f3; background: #fff; }
         .category-bar a { transition: color .15s ease, border-color .15s ease; }
         /* Tab & filter: garis bawah, bukan pil */
         .tab-link { border-bottom: 2px solid transparent; transition: border-color .15s ease, color .15s ease; }
-        .tab-link.active { border-color: #6d28d9; color: #6d28d9; }
+        .tab-link.active { border-color: #34476e; color: #34476e; }
         @media (prefers-reduced-motion: reduce) { * { transition-duration: 0.01ms !important; } }
 
         /* ===== Mode Gelap ===== */
@@ -128,12 +128,12 @@
 
         /* Aksen ungu (clay) */
         html.dark-mode .bg-clay-50,
-        html.dark-mode .bg-clay-100 { background-color: rgba(124,58,237,0.18) !important; }
+        html.dark-mode .bg-clay-100 { background-color: rgba(79,100,145,0.18) !important; }
         html.dark-mode .text-clay-600,
-        html.dark-mode .text-clay-700 { color: #c4b5fd !important; }
+        html.dark-mode .text-clay-700 { color: #a8b5cf !important; }
         html.dark-mode .border-clay-200,
         html.dark-mode .border-clay-300,
-        html.dark-mode .border-clay-400 { border-color: rgba(124,58,237,0.45) !important; }
+        html.dark-mode .border-clay-400 { border-color: rgba(79,100,145,0.45) !important; }
 
         /* Aksen hijau (forest) */
         html.dark-mode .bg-forest-50,
@@ -197,10 +197,10 @@
         html.dark-mode .shadow-soft,
         html.dark-mode .shadow-card { box-shadow: 0 8px 24px -8px rgba(0,0,0,0.55) !important; }
         html.dark-mode ::-webkit-scrollbar-thumb { background: #334155; }
-        html.dark-mode .texture-dots { background-image: radial-gradient(#a78bfa22 1px, transparent 1px); }
+        html.dark-mode .texture-dots { background-image: radial-gradient(#7b8cb022 1px, transparent 1px); }
         html.dark-mode .hover\:bg-ink-50:hover,
         html.dark-mode .hover\:bg-ink-100:hover { background-color: rgba(255,255,255,0.08) !important; }
-        html.dark-mode .hover\:border-clay-300:hover { border-color: rgba(124,58,237,0.5) !important; }
+        html.dark-mode .hover\:border-clay-300:hover { border-color: rgba(79,100,145,0.5) !important; }
 
         .theme-toggle-btn { transition: background-color .2s ease, color .2s ease; }
         html.dark-mode .theme-toggle-icon-moon { display: none; }
@@ -221,6 +221,98 @@
             header, footer, #nav-progress, #promo-banner, #toast-container, nav.md\:hidden, .theme-toggle-btn { display: none !important; }
             body { background: #fff !important; padding-bottom: 0 !important; }
             #app-main { margin: 0 !important; }
+        }
+    </style>
+
+    <style>
+        /* ===== Lapisan desain: tenang, rapi, gerak halus ===== */
+        :root { --ease: cubic-bezier(.22,1,.36,1); --ease-io: cubic-bezier(.65,0,.35,1); }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-padding-top: 7rem; }
+        h1, h2, h3, .font-serif { letter-spacing: -.022em; text-wrap: balance; }
+        p { text-wrap: pretty; }
+
+        /* Transisi antarhalaman (browser yang mendukung) */
+        @view-transition { navigation: auto; }
+        ::view-transition-old(root) { animation: vt-out .2s var(--ease-io) both; }
+        ::view-transition-new(root) { animation: vt-in .5s var(--ease) both; }
+        @keyframes vt-out { to { opacity: 0; } }
+        @keyframes vt-in { from { opacity: 0; transform: translateY(10px); } }
+
+        /* Header: kaca gelap tipis, bayangan muncul saat scroll */
+        header.sticky { background: rgba(38,53,84,.9) !important; backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%); box-shadow: none; transition: box-shadow .5s var(--ease), background-color .5s var(--ease); }
+        header.sticky.is-scrolled { box-shadow: 0 10px 30px -14px rgba(21,29,47,.45); }
+        .category-bar { background: rgba(255,255,255,.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+        /* Kartu & gambar */
+        .market-card { border-radius: 1rem; border-color: rgba(21,29,47,.06); transition: transform .55s var(--ease), box-shadow .55s var(--ease), border-color .3s ease; }
+        .market-card:hover { transform: translateY(-2px); box-shadow: 0 18px 36px -20px rgba(21,29,47,.28); border-color: rgba(21,29,47,.1); }
+        .market-card img { transition: transform 1s var(--ease), opacity .6s ease; }
+        .market-card:hover img { transform: scale(1.035); }
+        img { transition: opacity .6s ease; }
+        img[loading=lazy]:not(.loaded) { opacity: 0; }
+
+        /* Tombol & tautan */
+        button, a { transition-timing-function: var(--ease); }
+        button:not(:disabled):active, a[class*="bg-clay-"]:active, a[class*="bg-white"]:active { transform: scale(.975); }
+        a[class*="bg-clay-"]:hover, button[class*="bg-clay-"]:hover { box-shadow: 0 10px 24px -12px rgba(52,71,110,.55); }
+        :focus-visible { outline: 2px solid #4f6491; outline-offset: 3px; }
+
+        /* Form */
+        html body input:not([type=checkbox]):not([type=radio]), html body select, html body textarea { border-radius: .75rem; transition: box-shadow .35s var(--ease), border-color .25s ease, background-color .25s ease; }
+        html body input:not([type=checkbox]):not([type=radio]):focus, html body select:focus, html body textarea:focus { outline: none; border-color: #4f6491; box-shadow: 0 0 0 4px rgba(79,100,145,.16); }
+
+        /* Dropdown akun: lebih lembut */
+        .group > div.absolute { transition-duration: .35s !important; transition-timing-function: var(--ease) !important; transform-origin: top right; }
+
+        /* Footer lebih tenang */
+        footer { background: #131a2a; }
+        footer .gradient-mesh { opacity: .25; }
+
+        /* Muncul bertahap (diaktifkan JS; tanpa JS konten tetap tampil) */
+        .js-r [data-r]:not(.in) { opacity: 0; transform: translateY(14px); }
+        .js-r [data-r] { transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0ms); }
+
+        /* Mobile: navigasi bawah melayang, area sentuh nyaman */
+        @media (max-width: 767px) {
+            body.pb-16 { padding-bottom: 6.5rem; }
+            nav.md\:hidden.fixed { left: 12px; right: 12px; bottom: calc(10px + env(safe-area-inset-bottom)); border-radius: 1.25rem; border: 1px solid rgba(21,29,47,.07); padding-bottom: 0 !important; background: rgba(255,255,255,.82) !important; backdrop-filter: blur(20px) saturate(170%); -webkit-backdrop-filter: blur(20px) saturate(170%); box-shadow: 0 16px 44px -14px rgba(21,29,47,.32); }
+            .theme-toggle-btn.fixed { bottom: 6.75rem; }
+            html body input:not([type=checkbox]):not([type=radio]), html body select, html body textarea { font-size: 16px; }
+            main a, main button { min-height: 36px; }
+        }
+        html.dark-mode nav.md\:hidden.fixed { background: rgba(17,24,39,.82) !important; border-color: rgba(255,255,255,.08); }
+        html.dark-mode header.sticky { background: rgba(11,17,32,.88) !important; }
+        html.dark-mode .category-bar { background: rgba(16,26,46,.85); }
+
+        @media (prefers-reduced-motion: reduce) {
+            @view-transition { navigation: none; }
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+            .js-r [data-r]:not(.in) { opacity: 1; transform: none; }
+        }
+    </style>
+    <style>
+        /* ===== Layout: ritme ruang, kartu, tabel responsif ===== */
+        main { min-height: 62vh; }
+        h1.font-serif { font-size: clamp(1.65rem, 1.25rem + 1.5vw, 2.4rem); line-height: 1.12; }
+        h2.font-serif { font-size: clamp(1.2rem, 1.05rem + .6vw, 1.6rem); }
+        main [class~="bg-white"][class~="border"].rounded-lg { border-radius: 1.25rem; border-color: rgba(21,29,47,.06); box-shadow: 0 1px 2px rgba(21,29,47,.03), 0 14px 34px -22px rgba(21,29,47,.2); }
+        main [class~="bg-white"][class~="border"].rounded-lg[class*="hover:"] { transition: transform .55s var(--ease), box-shadow .55s var(--ease), border-color .3s; }
+        main [class~="bg-white"][class~="border"].rounded-lg[class*="hover:"]:hover { transform: translateY(-2px); }
+        main > .max-w-7xl, main > section.max-w-7xl { padding-top: clamp(1.5rem, 1rem + 2vw, 3rem); }
+        main section + section { margin-top: clamp(.5rem, 1vw, 1.5rem); }
+        .rounded-full[class*="bg-clay-100"] { transition: background-color .35s var(--ease), color .35s var(--ease); }
+        thead th { letter-spacing: .01em; }
+        tbody tr { transition: background-color .3s ease; }
+        @media (max-width: 767px) {
+            .rt-wrap { background: transparent !important; border: 0 !important; box-shadow: none !important; overflow: visible !important; }
+            table.rt thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+            table.rt, table.rt tbody, table.rt tr, table.rt td { display: block; width: 100%; }
+            table.rt tr { border: 1px solid rgba(21,29,47,.07) !important; border-radius: 1.1rem; padding: .35rem 0; margin-bottom: .75rem; background: #fff; box-shadow: 0 12px 28px -22px rgba(21,29,47,.3); }
+            table.rt td { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .5rem 1rem !important; text-align: right !important; border: 0 !important; }
+            table.rt td::before { content: attr(data-label); color: #64748b; font-size: .75rem; text-align: left; flex-shrink: 0; }
+            table.rt td:not([data-label])::before { display: none; }
+            html.dark-mode table.rt tr { background: #1e293b; border-color: rgba(255,255,255,.08) !important; }
         }
     </style>
     @stack('styles')
@@ -428,7 +520,7 @@
         <svg class="theme-toggle-icon-sun h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-6.364-2.386 1.591-1.591M3 12h2.25m.386-6.364 1.591 1.591M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
     </button>
 
-    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 glass border-t border-ink-100 shadow-[0_-8px_24px_rgba(76,29,149,0.08)] pb-[env(safe-area-inset-bottom)] {{ $isAuthPage ? 'hidden' : '' }}">
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 glass border-t border-ink-100 shadow-[0_-8px_24px_rgba(32,44,69,0.08)] pb-[env(safe-area-inset-bottom)] {{ $isAuthPage ? 'hidden' : '' }}">
         <div class="grid grid-cols-4 h-16">
             <a href="{{ route('home') }}" class="flex flex-col items-center justify-center gap-1 active:scale-90 transition-transform {{ request()->routeIs('home') ? 'text-clay-600' : 'text-ink-400' }}">
                 <svg class="h-5 w-5" fill="{{ request()->routeIs('home') ? 'currentColor' : 'none' }}" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75" /></svg>
@@ -788,5 +880,50 @@
         @keyframes toast-out { from { opacity:1; transform: translateY(0); } to { opacity:0; transform: translateY(-10px); } }
     </style>
     @stack('scripts')
+
+    <script>
+    // Gerak halus: muncul bertahap saat masuk layar, header saat scroll, gambar lazy
+    (function () {
+        var root = document.documentElement, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var hdr = document.querySelector('header.sticky');
+        function onScroll() { if (hdr) hdr.classList.toggle('is-scrolled', scrollY > 8); }
+        addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+        document.querySelectorAll('img').forEach(function (im) {
+            if (im.complete) im.classList.add('loaded'); else im.addEventListener('load', function () { im.classList.add('loaded'); });
+            im.addEventListener('error', function () { im.classList.add('loaded'); });
+        });
+
+        if (reduce || !('IntersectionObserver' in window)) return;
+        var sel = 'main .market-card, main .flash-card, main table tbody tr, main > section:not(:first-child), main > div[class*='max-w-'], main form > div.bg-white';
+        var els = Array.prototype.filter.call(document.querySelectorAll(sel), function (el) { return !el.parentElement.closest('[data-r]') && !el.querySelector('[data-r]'); });
+        if (!els.length) return;
+        root.classList.add('js-r');
+        els.forEach(function (el) { el.setAttribute('data-r', ''); });
+        var io = new IntersectionObserver(function (entries) {
+            var n = 0;
+            entries.forEach(function (e) {
+                if (!e.isIntersecting) return;
+                var el = e.target; io.unobserve(el);
+                el.style.setProperty('--d', Math.min(n++ * 70, 420) + 'ms');
+                requestAnimationFrame(function () { el.classList.add('in'); });
+                setTimeout(function () { el.removeAttribute('data-r'); el.style.removeProperty('--d'); }, 1500);
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: .06 });
+        els.forEach(function (el) { io.observe(el); });
+        addEventListener('pageshow', function (e) { if (e.persisted) els.forEach(function (el) { el.classList.add('in'); }); });
+    })();
+    </script>
+    <script>
+    // Tabel -> kartu bertumpuk di mobile (label dari header kolom)
+    document.querySelectorAll('main table').forEach(function (t) {
+        var th = Array.prototype.map.call(t.querySelectorAll('thead th'), function (x) { return x.textContent.trim(); });
+        if (!th.length) return;
+        t.classList.add('rt'); if (t.parentElement) t.parentElement.classList.add('rt-wrap');
+        t.querySelectorAll('tbody tr').forEach(function (tr) {
+            Array.prototype.forEach.call(tr.children, function (td, i) { if (th[i]) td.setAttribute('data-label', th[i]); });
+        });
+    });
+    </script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<div class="flex items-center gap-1 overflow-x-auto border-b border-ink-100 mb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <a href="<?php echo e(route('admin.dashboard')); ?>" class="shrink-0 px-4 py-3 text-sm font-semibold rounded-full transition-colors <?php echo e(request()->routeIs('admin.dashboard') ? 'bg-clay-100 text-clay-600' : 'text-ink-400 hover:text-ink-700'); ?>">Ringkasan</a>
+    <a href="<?php echo e(route('admin.stores.index')); ?>" class="shrink-0 px-4 py-3 text-sm font-semibold rounded-full transition-colors <?php echo e(request()->routeIs('admin.stores.*') ? 'bg-clay-100 text-clay-600' : 'text-ink-400 hover:text-ink-700'); ?>">Toko</a>
+    <a href="<?php echo e(route('admin.products.index')); ?>" class="shrink-0 px-4 py-3 text-sm font-semibold rounded-full transition-colors <?php echo e(request()->routeIs('admin.products.*') ? 'bg-clay-100 text-clay-600' : 'text-ink-400 hover:text-ink-700'); ?>">Moderasi Produk</a>
+    <a href="<?php echo e(route('admin.categories.index')); ?>" class="shrink-0 px-4 py-3 text-sm font-semibold rounded-full transition-colors <?php echo e(request()->routeIs('admin.categories.*') ? 'bg-clay-100 text-clay-600' : 'text-ink-400 hover:text-ink-700'); ?>">Kategori</a>
+    <a href="<?php echo e(route('admin.banners.index')); ?>" class="shrink-0 px-4 py-3 text-sm font-semibold rounded-full transition-colors <?php echo e(request()->routeIs('admin.banners.*') ? 'bg-clay-100 text-clay-600' : 'text-ink-400 hover:text-ink-700'); ?>">Banner</a>
+    <a href="<?php echo e(route('admin.users.index')); ?>" class="shrink-0 px-4 py-3 text-sm font-semibold rounded-full transition-colors <?php echo e(request()->routeIs('admin.users.*') ? 'bg-clay-100 text-clay-600' : 'text-ink-400 hover:text-ink-700'); ?>">Pengguna</a>
+    <a href="<?php echo e(route('admin.orders.index')); ?>" class="shrink-0 px-4 py-3 text-sm font-semibold rounded-full transition-colors <?php echo e(request()->routeIs('admin.orders.*') ? 'bg-clay-100 text-clay-600' : 'text-ink-400 hover:text-ink-700'); ?>">Transaksi</a>
+</div>
+<?php /**PATH C:\laragon\www\ecommerce\resources\views/partials/admin-nav.blade.php ENDPATH**/ ?>

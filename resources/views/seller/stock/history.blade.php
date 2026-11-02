@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Riwayat Stok')
 @section('content')
-<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <a href="{{ route('seller.stock.index') }}" class="text-sm text-ink-400 hover:text-clay-600 mb-4 inline-block">&larr; Kembali ke Manajemen Stok</a>
 
     <div class="flex items-center gap-3 mb-6">

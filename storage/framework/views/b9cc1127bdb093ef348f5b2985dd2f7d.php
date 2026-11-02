@@ -1,8 +1,8 @@
 <?php $__env->startSection('title', 'Pesan'); ?>
 <?php $__env->startSection('content'); ?>
-<section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <div class="mb-6">
-        <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900">Pesan</h1>
+        <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900">Pesan</h1>
         <p class="text-sm text-ink-400 mt-1">Percakapan kamu dengan <?php echo e(auth()->user()->role === 'seller' ? 'pembeli' : 'penjual'); ?>.</p>
     </div>
 
@@ -24,7 +24,7 @@
         ?>
         <a href="<?php echo e(route('chat.show', $conversation)); ?>" class="flex items-center gap-3 rounded-lg border p-4 transition-colors <?php echo e($unread ? 'border-clay-200 bg-clay-50/60' : 'border-ink-100 bg-white'); ?> hover:border-clay-300 hover:shadow-soft">
             <span class="relative shrink-0">
-                <span class="h-11 w-11 rounded-full bg-gradient-to-br from-forest-400 to-forest-600 text-white text-sm font-bold flex items-center justify-center">
+                <span class="h-11 w-11 rounded-full bg-forest-600 text-white text-sm font-bold flex items-center justify-center">
                     <?php echo e(strtoupper(substr($other->store_name ?? $other->name, 0, 1))); ?>
 
                 </span>

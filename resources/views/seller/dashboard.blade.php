@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Dashboard Toko')
 @section('content')
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <div class="mb-2">
         <p class="text-xs font-bold uppercase tracking-wide text-forest-600">Dashboard Toko</p>
-        <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900">Halo, {{ auth()->user()->store_name ?? auth()->user()->name }} 👋</h1>
+        <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900">Halo, {{ auth()->user()->store_name ?? auth()->user()->name }} 👋</h1>
     </div>
     @include('partials.seller-nav')
 
@@ -150,12 +150,12 @@ new Chart(document.getElementById('revenueChart'), {
         datasets: [{
             label: 'Pendapatan',
             data: @json($revenueTrend->pluck('value')),
-            borderColor: '#7c3aed',
-            backgroundColor: 'rgba(124,58,237,0.12)',
+            borderColor: '#4f6491',
+            backgroundColor: 'rgba(79,100,145,0.12)',
             tension: 0.35,
             fill: true,
             pointRadius: 3,
-            pointBackgroundColor: '#7c3aed',
+            pointBackgroundColor: '#4f6491',
         }]
     },
     options: {

@@ -18,7 +18,7 @@
             </div>
             <div class="pb-1 min-w-0 flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
-                    <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900 truncate">{{ $seller->store_name ?? $seller->name }}</h1>
+                    <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900 truncate">{{ $seller->store_name ?? $seller->name }}</h1>
                     @if($seller->isOnline())
                     <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-forest-700 bg-forest-100 px-2.5 py-1 rounded-full shrink-0">
                         <span class="h-1.5 w-1.5 rounded-full bg-forest-500 animate-pulse"></span>Online

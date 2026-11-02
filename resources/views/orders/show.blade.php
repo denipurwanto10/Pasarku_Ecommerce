@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Detail Pesanan')
 @section('content')
-<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <a href="{{ route('orders.index') }}" class="text-sm text-ink-400 hover:text-clay-600 mb-6 inline-flex items-center gap-1">
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
         Kembali ke Pesanan Saya

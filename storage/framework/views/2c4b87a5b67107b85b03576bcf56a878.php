@@ -1,8 +1,8 @@
 <?php $__env->startSection('title', 'Notifikasi'); ?>
 <?php $__env->startSection('content'); ?>
-<section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <div class="flex items-center justify-between mb-6">
-        <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900">Notifikasi</h1>
+        <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900">Notifikasi</h1>
         <?php if($notifications->contains(fn($n) => is_null($n->read_at))): ?>
         <form action="<?php echo e(route('notifications.readAll')); ?>" method="POST">
             <?php echo csrf_field(); ?>

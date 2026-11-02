@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Pesan')
 @section('content')
-<section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <div class="mb-6">
-        <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900">Pesan</h1>
+        <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900">Pesan</h1>
         <p class="text-sm text-ink-400 mt-1">Percakapan kamu dengan {{ auth()->user()->role === 'seller' ? 'pembeli' : 'penjual' }}.</p>
     </div>
 

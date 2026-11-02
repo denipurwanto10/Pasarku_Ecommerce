@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Kelola Pengguna')
 @section('content')
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900 mb-2">Panel Admin</h1>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900 mb-2">Panel Admin</h1>
     @include('partials.admin-nav')
 
     <form method="GET" class="flex flex-wrap items-center gap-2 mb-6">

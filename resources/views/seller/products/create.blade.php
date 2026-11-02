@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Tambah Produk')
 @section('content')
-<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <a href="{{ route('seller.products.index') }}" class="text-sm text-ink-400 hover:text-clay-600 mb-4 inline-block">&larr; Kembali</a>
-    <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900 mb-8">Tambah Produk Baru</h1>
+    <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900 mb-8">Tambah Produk Baru</h1>
 
     @if($errors->any())
     <div class="mb-5 rounded-md bg-rose-50 border border-rose-200 text-rose-700 text-sm px-4 py-3">

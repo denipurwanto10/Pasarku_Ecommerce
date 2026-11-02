@@ -20,7 +20,7 @@
             <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
                 <div>
                     <p class="text-xs text-ink-400 mb-1"><?php echo e($item->order->order_number); ?> · <?php echo e($item->order->created_at->translatedFormat('d M Y, H:i')); ?></p>
-                    <p class="text-sm font-semibold text-ink-800"><?php echo e($item->product_name); ?></p>
+                    <p class="text-sm font-semibold text-ink-800"><?php echo e($item->product_name); ?><?php if($item->variant_name): ?> <span class="font-normal text-ink-400">(<?php echo e($item->variant_name); ?>)</span><?php endif; ?></p>
                     <p class="text-xs text-ink-500 mt-0.5"><?php echo e($item->quantity); ?> x Rp<?php echo e(number_format($item->price,0,',','.')); ?> = <span class="font-semibold text-ink-800">Rp<?php echo e(number_format($item->subtotal,0,',','.')); ?></span></p>
                     <p class="text-xs text-ink-400 mt-2">Pembeli: <?php echo e($item->order->buyer->name); ?> · <?php echo e($item->order->shipping_phone); ?></p>
                     <p class="text-xs text-ink-400"><?php echo e(Str::limit($item->order->shipping_address, 60)); ?></p>

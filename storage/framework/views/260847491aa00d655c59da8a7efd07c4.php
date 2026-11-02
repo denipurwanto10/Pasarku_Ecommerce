@@ -1,14 +1,14 @@
 <?php $__env->startSection('title', 'Chat dengan '.($otherUser->store_name ?? $otherUser->name)); ?>
 <?php $__env->startSection('content'); ?>
 <section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
-    <div class="rounded-lg border border-ink-100 bg-white shadow-soft overflow-hidden flex flex-col h-[75vh] sm:h-[70vh]">
+    <div class="rounded-lg border border-ink-100 bg-white shadow-soft overflow-hidden flex flex-col h-[calc(100dvh-14rem)] min-h-[26rem] sm:h-[70dvh]">
 
         <div class="flex items-center gap-3 px-4 sm:px-5 py-3.5 border-b border-ink-100 shrink-0">
             <a href="<?php echo e(route('chat.index')); ?>" class="p-1.5 -ml-1.5 rounded-full hover:bg-ink-100 active:scale-90 transition-all">
                 <svg class="h-5 w-5 text-ink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
             </a>
             <span class="relative shrink-0">
-                <span class="h-10 w-10 rounded-full bg-gradient-to-br from-forest-400 to-forest-600 text-white text-sm font-bold flex items-center justify-center">
+                <span class="h-10 w-10 rounded-full bg-forest-600 text-white text-sm font-bold flex items-center justify-center">
                     <?php echo e(strtoupper(substr($otherUser->store_name ?? $otherUser->name, 0, 1))); ?>
 
                 </span>
@@ -26,7 +26,7 @@
             <?php endif; ?>
         </div>
 
-        <div id="chat-messages" class="flex-1 overflow-y-auto px-4 sm:px-5 py-4 space-y-3 bg-ink-50/40">
+        <div id="chat-messages" class="flex-1 overflow-y-auto px-4 sm:px-5 py-4 space-y-3 bg-transparent">
             <?php $__empty_1 = true; $__currentLoopData = $messages; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
             <div class="flex <?php echo e($message->sender_id === auth()->id() ? 'justify-end' : 'justify-start'); ?>" data-message-id="<?php echo e($message->id); ?>">
                 <div class="max-w-[75%] rounded-lg px-3.5 py-2 text-sm shadow-soft <?php echo e($message->sender_id === auth()->id() ? 'gradient-brand text-white rounded-br-sm' : 'bg-white text-ink-700 border border-ink-100 rounded-bl-sm'); ?>">
@@ -56,9 +56,9 @@
         <form id="chat-form" action="<?php echo e(route('chat.store', $conversation)); ?>" method="POST" class="flex items-center gap-2 px-3 sm:px-4 py-3 border-t border-ink-100 shrink-0">
             <?php echo csrf_field(); ?>
             <input type="text" name="body" id="chat-input" placeholder="Tulis pesan..." autocomplete="off" required maxlength="2000"
-                class="flex-1 rounded-full border border-ink-200 bg-white px-4 py-2.5 text-sm shadow-soft focus:outline-none focus:ring-2 focus:ring-clay-400 focus:border-clay-400 transition">
-            <button type="submit" class="btn-tactile shrink-0 h-10 w-10 rounded-full gradient-brand text-white flex items-center justify-center shadow-glow hover:brightness-110 transition">
-                <svg class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" /></svg>
+                class="flex-1 rounded-full border border-ink-200 bg-white px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-clay-400 focus:border-clay-400 transition">
+            <button type="submit" class="btn-tactile shrink-0 h-11 w-11 rounded-full gradient-brand text-white flex items-center justify-center hover:brightness-110 transition">
+                <svg class="h-[18px] w-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" /></svg>
             </button>
         </form>
     </div>

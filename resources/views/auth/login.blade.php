@@ -21,7 +21,7 @@
         <div class="w-full max-w-md">
             <div class="text-center lg:text-left mb-8">
                 <span class="inline-flex lg:hidden h-12 w-12 items-center justify-center rounded-lg gradient-brand text-white font-serif text-2xl font-bold shadow-glow mb-3">P</span>
-                <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900">Selamat Datang Kembali</h1>
+                <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900">Selamat Datang Kembali</h1>
                 <p class="text-sm text-ink-400 mt-1.5">Masuk untuk melanjutkan belanja atau kelola tokomu.</p>
             </div>
 
@@ -54,9 +54,7 @@
             </div>
 
             <div class="mt-6 rounded-lg bg-ink-50 border border-ink-100 px-4 py-3 text-xs text-ink-500 space-y-1">
-                <p class="font-semibold text-ink-600">Akun demo:</p>
-                <p>Pembeli — buyer@pasarku.test / password</p>
-                <p>Penjual — seller@pasarku.test / password</p>
+                
             </div>
         </div>
     </div>

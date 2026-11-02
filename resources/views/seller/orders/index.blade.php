@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Pesanan Masuk')
 @section('content')
-<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-    <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900 mb-2">Kelola Toko</h1>
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900 mb-2">Kelola Toko</h1>
     @include('partials.seller-nav')
 
     <form method="GET" class="flex gap-2 mb-6 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

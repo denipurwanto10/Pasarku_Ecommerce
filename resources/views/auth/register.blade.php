@@ -21,7 +21,7 @@
         <div class="w-full max-w-md">
             <div class="text-center lg:text-left mb-7">
                 <span class="inline-flex lg:hidden h-12 w-12 items-center justify-center rounded-lg gradient-brand text-white font-serif text-2xl font-bold shadow-glow mb-3">P</span>
-                <h1 class="font-serif text-2xl sm:text-3xl font-bold text-ink-900">Buat Akun Baru</h1>
+                <h1 class="font-serif text-2xl sm:text-3xl font-semibold text-ink-900">Buat Akun Baru</h1>
                 <p class="text-sm text-ink-400 mt-1.5">Gratis, cukup beberapa langkah saja.</p>
             </div>
 
